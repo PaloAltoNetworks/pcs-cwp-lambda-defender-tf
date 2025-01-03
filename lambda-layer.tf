@@ -3,12 +3,13 @@ data "external" "download_defender_layer" {
 
   query = {
     # arbitrary map from strings to strings, passed to the external program as the data query.
-    pcc_url  = var.console_url
-    pcc_user = var.prisma_username
-    pcc_pass = var.prisma_password
-    pcc_san  = var.console_san
-    filename = var.layer_filename
-    runtime  = var.runtime
+    pcc_url     = var.console_url
+    pcc_user    = var.prisma_username
+    pcc_pass    = var.prisma_password
+    pcc_san     = var.console_san
+    filename    = var.layer_filename
+    runtime     = var.runtime
+    module_type = var.module_type
   }
 }
 

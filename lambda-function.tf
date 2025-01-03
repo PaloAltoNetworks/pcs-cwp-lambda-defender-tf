@@ -26,7 +26,7 @@ resource "aws_lambda_function" "my-function" {
   handler          = "twistlock.handler"
   source_code_hash = data.archive_file.lambda.output_base64sha256
 
-  runtime = "${var.runtime}3.12"
+  runtime = "${var.runtime}${var.runtime_version}"
 
   environment {
     variables = {
